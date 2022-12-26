@@ -10,6 +10,7 @@ const InputTodo = () => {
       const response = await fetch("https://perntodo-backend.onrender.com/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        headers: {"Access-Control-Allow-Origin" : "https://perntodo-vq2v.onrender.com"},
         body: JSON.stringify(body)
       });
 

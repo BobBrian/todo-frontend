@@ -14,6 +14,7 @@ const EditTodo = ({ todo }) => {
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
+          headers: {"Access-Control-Allow-Origin" : "https://perntodo-vq2v.onrender.com"},
           body: JSON.stringify(body)
         }
       );
