@@ -11,6 +11,7 @@ const ListTodos = () => {
     try {
       const deleteTodo = await fetch(`https://perntodo-backend.onrender.com/todos/${id}`, {
         method: "DELETE",
+        mode: "cors",
       });
 
       setTodos(todos.filter(todo => todo.todo_id !== id));
@@ -21,7 +22,9 @@ const ListTodos = () => {
 
   const getTodos = async () => {
     try {
-      const response = await fetch("https://perntodo-backend.onrender.com/todos");
+      const response = await fetch("https://perntodo-backend.onrender.com/todos",{
+        mode: "cors",
+      });
       const jsonData = await response.json();
 
       setTodos(jsonData);

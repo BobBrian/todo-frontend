@@ -13,6 +13,7 @@ const EditTodo = ({ todo }) => {
         `https://perntodo-backend.onrender.com/${todo.todo_id}`,
         {
           method: "PUT",
+          mode: "cors",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body)
         }
