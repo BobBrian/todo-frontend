@@ -11,7 +11,6 @@ const ListTodos = () => {
     try {
       const deleteTodo = await fetch(`https://perntodo-backend.onrender.com/todos/${id}`, {
         method: "DELETE",
-        headers: {"Access-Control-Allow-Origin" : "https://perntodo-vq2v.onrender.com"},
       });
 
       setTodos(todos.filter(todo => todo.todo_id !== id));
